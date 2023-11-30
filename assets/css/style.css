@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Dancing+Script:wght@400;700&family=Mooli&family=Poppins:wght@200;400;700&display=swap');
+
+:root{
+    --dark: #141E46;
+    --white: #F0F0F0;
+    --light: #ffff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light);
+}
+
+/* header start */
+header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.776);
+    z-index: -1;
+}
+
+header{
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('../img/bg-header.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+/* navbar start */
+
+header .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(20, 30, 70, 0.909);
+    backdrop-filter: blur(3px);
+    min-height: 10vh;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 4;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navbar h3{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.navbar h3 .rak{
+    border: 1.5px solid #FFF5E0;
+    color: var(--white);
+    background-color: var(--dark);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 0.5rem;
+}
+
+.navbar h3 .buku{
+    color: var(--dark);
+    background-color: var(--white);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-right: 0.5rem;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.navbar .profil{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .profil h5{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: var(--white);
+    font-weight: 400;
+}
+
+.navbar .profil img{
+    height: 40px;
+    border-radius: 50%;
+}
+/* navbar end */
+
+/* welcome sign start */
+header .welcomeSign{
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.welcomeSign h1{
+    margin-block-end: 0;
+    color: var(--dark);
+    
+}
+
+.welcomeSign .button{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.welcomeSign .buttonStart{
+    text-decoration: none;
+    color: var(--light);
+    background-color: var(--dark);
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1px 2px 1px rgba(7, 9, 18, 0.977);
+}
+
+.welcomeSign .buttonStart:hover{
+    background-color: var(--light);
+    color: var(--dark);
+    transition: none;
+}
+
+.welcomeSign .buttonMenu{
+    text-decoration: none;
+    color: var(--dark);
+    background-color: var(--light);
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1px 3px 1px rgba(67, 72, 100, 0.897);
+}
+
+.welcomeSign .buttonMenu:hover{
+    background-color: var(--dark);
+    color: var(--white);
+    transition: none;
+}
+/* welcome sign end */
+/* header end */
+
+/* main start */
+main .addBuku{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light);
+    min-height: 100vh;
+    width: 100%;
+    top: 0;
+}
+
+.addBuku .headingAdd{
+    color: var(--dark);
+}
+
+/* form start */
+.addBuku .form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form .judul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.form .judul label{
+    text-align: left;
+    padding-left: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.form .judul input{
+    width: 95%;
+    height: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 1px 4px 1px rgba(121, 128, 155, 0.897);
+}
+
+.judul input[type=text]:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px #46579a;
+}
+
+.form .penulis{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.form .penulis label{
+    text-align: left;
+    padding-left: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.form .penulis input{
+    width: 95%;
+    height: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 1px 4px 1px rgba(121, 128, 155, 0.897);
+}
+
+.penulis input[type=text]:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px #46579a;
+}
+
+.form .tahun{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.form .tahun label{
+    text-align: left;
+    padding-left: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.form .tahun input{
+    width: 95%;
+    height: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 1px 4px 1px rgba(121, 128, 155, 0.897);
+}
+
+.tahun input[type=text]:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px #46579a;
+}
+/* form end */
+
+/* Submit button start */
+.submitBook{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 20%;
+}
+
+.submitBook button{
+    
+    text-align: center;
+    color: var(--light);
+    background-color: var(--dark);
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1px 3px 1px rgba(67, 72, 100, 0.897);
+}
+
+.submitBook button:hover{
+    background-color: var(--light);
+    color: var(--dark);
+    transition: none;
+}
+/* Submit button end */
+
+/* content rak start */
+main .contentRak{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--white);
+}
+
+/* fitur searching start */
+.contentRak .iconSearch{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 30vh;
+    width: 100%;
+    top: 0;
+    background-image: url('../img/mini-nav.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 2rem;
+    z-index: 1;
+}
+
+.contentRak .iconSearch::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 240, 240, 0.32);
+    z-index: -1;
+}
+
+.contentRak .iconSearch button{
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 10px;
+    border: none;
+    height: 1.7rem;
+    width: 3rem;
+    box-shadow: 0 1px 2px 1px rgba(22, 23, 28, 0.897);
+}
+
+.contentRak .iconSearch button:hover{
+    background-color: var(--light);
+    color: var(--dark);
+    transition: none;
+}
+
+.contentRak .iconSearch input{
+    width: 60%;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 1px 4px 1px rgba(42, 45, 55, 0.897);
+}
+
+.contentRak .iconSearch input[type=text]:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px #46579a;
+}
+
+.contentRak .searchResults{
+    display: none;
+}
+
+.contentRak .searchResults:not(.hidden){
+    display: flex;
+    background-color: var(--light);
+    padding-bottom: 1rem;
+}
+
+.contentRak .searchResults:not(.hidden) h3{
+    color: var(--dark);
+}
+/* fitur searching end */
+
+/* daftar buku start */
+.contentRak .contentBuku{
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    width: 100%;
+    background-color: #FFF5E0;
+    justify-content: center;
+    align-items: center;
+}
+
+/* buku belum dibaca start */
+.contentRak .contentBuku .belumBaca{
+    background-color: var(--light);
+    min-height: 35vh;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.contentRak .contentBuku .belumBaca .daftarBelum{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+/* buku belum dibaca end */
+
+/* buku sudah dibaca start */
+.contentRak .contentBuku .sudahBaca{
+    background-color: var(--light);
+    min-height: 35vh;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.contentRak .contentBuku .sudahBaca .daftarSudah{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.contentRak .contentBuku .belumBaca h3, .contentRak .contentBuku .sudahBaca h3{
+    color: var(--dark);
+}
+/* buku sudah dibaca end */
+
+.contentRak .contentBuku .belumBaca li, .contentRak .contentBuku .sudahBaca li{
+    list-style: none;
+}
+/* daftar buku end */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
+    min-height: 10vh;
+    width: 100%;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--white);
+    padding-top: 1rem;
+}
+
+footer h3{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+}
+
+footer h3 .rak{
+    border: 1.5px solid #FFF5E0;
+    color: var(--white);
+    background-color: var(--dark);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 0.5rem;
+}
+
+footer h3 .buku{
+    color: var(--dark);
+    background-color: var(--white);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-right: 0.5rem;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+footer p{
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 1rem;
+    font-size: 14px;
+    color: var(--white);
+}
+
+@media screen and (max-width: 1200px){
+
+    html{
+        font-size: 90%;
+    }
+
+    .contentRak .contentBuku .belumBaca li, .contentRak .contentBuku .sudahBaca li{
+        list-style: none;
+        font-size: 70%;
+    }
+
+    .contentRak .contentBuku .belumBaca button, .contentRak .contentBuku .sudahBaca button{
+        font-size: 70%;
+    }
+
+    .contentRak .searchResults p{
+        font-size: 70%;
+    }
+
+    .contentRak .searchResults div{
+        font-size: 70%;
+    }
+
+    .contentRak .searchResults div button{
+        font-size: 70%;
+    }
+
+    footer p{
+        font-size: 65%;
+    }
+
+}

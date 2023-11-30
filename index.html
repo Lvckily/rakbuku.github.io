@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Submission | RakeBook</title>
+
+        <!-- style -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <header id="header">
+        
+            <!-- Navbar start -->
+            <nav id="navbar" class="navbar">
+                <a href="#header" class="icon" ><h3><span class="rak">Rak </span><span class="buku">eBook</span></h3></a>
+
+                <div class="profil">
+                    <h5>Luluk Ambarwati</h5>
+                    <img src="assets/img/profile2.jpg" alt="">
+                </div>
+            </nav>
+            <!-- Navbar end -->
+
+            <!-- Welcome sign start -->
+            <div id="welcomeSign" class="welcomeSign">
+                <h1>Hai, Selamat Datang!</h1>
+                <P>Ayo simpan eBook favoritmu.</P>
+                <div class="button">
+                    <a href="#addBuku" class="buttonStart">Mulai</a>
+                    <a href="#contentRak" class="buttonMenu">eBook</a>
+                </div>
+            </div>
+            <!-- welcome sign end -->
+
+        </header>
+
+        <main>
+            <!-- Form buku section start -->
+            <section id="addBuku" class="addBuku">
+
+                <!-- heading start -->
+                <div class="headingAdd">
+                    <h2>Masukkan Informasi Buku</h2>
+                </div>
+                <!-- heading end -->
+            
+                <!-- form start -->
+                <div class="form">
+                    <div class="judul">
+                        <label for="judul">Judul</label>
+                        <input type="text" name="judul" id="judul" required>
+                    </div>
+    
+                    <div class="penulis">
+                        <label for="penulis">Penulis</label>
+                        <input type="text" name="penulis" id="penulis">
+                    </div>
+    
+                    <div class="tahun">
+                        <label for="tahun">Tahun</label>
+                        <input type="text" name="tahun" id="tahun">
+                    </div>
+                </div>
+                <!-- form end -->
+
+                <!-- button submit start -->
+                <div class="submitBook">
+                    <button id="submitBook">Simpan</button>
+                </div>
+                <!-- button submit end -->
+
+            </section>
+            <!-- Form buku section end -->
+
+            <!-- Daftar buku section start -->
+            <section id="contentRak" class="contentRak">
+
+                <!--Fitur searching start -->
+                <div id="iconSearch" class="iconSearch">
+                    <input type="text" name="searchBuku" id="searchBuku" placeholder="Cari buku...">
+                    <button onclick="cariBuku()">Cari</button>
+                </div>
+
+                <div id="searchResults" class="searchResults"></div>
+                <!-- fitur searching end -->
+
+                <!-- daftar buku start -->
+                <div id="contentBuku" class="contentBuku">
+
+                    <!-- buku belum dibaca start -->
+                    <div id="belumBaca" class="belumBaca">
+                        <div id="daftarBelum" class="daftarBelum"></div>
+                    </div>
+                    <!-- buku belum dibaca end -->
+
+                    <!-- buku sudah dibaca start -->
+                    <div id="sudahBaca" class="sudahBaca">
+                        <div id="daftarSudah" class="daftarSudah"></div>
+                    </div>
+                    <!-- buku sudah dibaca end -->
+
+                </div>
+                <!-- daftar buku end -->
+
+            </section>
+            <!-- Daftar buku section end -->
+        </main>
+
+        <!-- Footer start -->
+        <footer>
+            <a href="#header" class="icon" ><h3><span class="rak">Rak </span><span class="buku">eBook</span></h3></a>
+            <p>Submission Belajar Membuat Front-End Web untuk Pemula 2023, Luluk Ambarwati</p>
+        </footer>
+        <!-- Footer end -->
+
+        <!-- Js -->
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
